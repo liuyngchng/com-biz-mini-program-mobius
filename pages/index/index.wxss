@@ -9,7 +9,7 @@
 .userinfo-avatar {
   width: 128rpx;
   height: 128rpx;
-  margin: 20rpx;
+  margin: 5rpx;
   border-radius: 50%;
   font-family: "Microsoft YaHei";
 }
@@ -20,6 +20,23 @@
 }
 
 .usermotto {
-  margin-top: 200px;
+  margin-top: 10px;
   font-family: "Microsoft YaHei";
+}
+
+.myfont {
+  font-family: "Microsoft YaHei";
+}
+.mtp30 {
+  margin-top: 30px;
+}
+.mtp10 {
+  margin-top: 10px;
+}
+.border1 {
+   border:10px;
+}
+.nobreak {
+  padding:0px; 
+  margin:0px;
 }
