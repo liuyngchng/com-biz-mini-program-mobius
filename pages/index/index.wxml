@@ -5,17 +5,22 @@
     <text class="userinfo-nickname">{{userInfo.nickName}}</text>
   </view>
   <view class="usermotto">
-    <text class="user-motto">{{motto}}，{{userInfo.nickName}}</text>
+    <text class="user-motto">{{motto}}, {{userInfo.nickName}}</text>
   </view>
-  <view class="section">
-    <text class="mtp10 nobreak">事件：</text>
-    <textarea placeholder="请输入事件" placeholder-class="myfont" maxlength="100" />
+  <view style="display:flex;">
+    <label class="mtp10 nobreak">事件：</label> 
+    <input placeholder="请输入事件" type="text" placeholder-class="myfont" maxlength="100" />
   </view>
-  <view class="section"> 
+  <view style="display:flex;"> 
     <text class="mtp10 nobreak">事件：</text>
     <input type="digit" />
   </view>
-    <text class="mtp10 nobreak">位置：</text>
+  <view style="display:flex;">
+    <label class="mtp10">位置：</label>
+  </view>
     <map id="map" longitude="116.35" latitude="40.0" scale="14" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}" bindregionchange="regionchange" show-location="true" style="width: 100%; height: 300px;" ></map>
-  <button class="mtp30" bindtap="submit"> 提交 </button>
+
+  <view style="display:flex;margin-top:30px;">
+    <button style="width:100%;" type="default" bindtap="getData">查询</button>
+  </view>
 </view>

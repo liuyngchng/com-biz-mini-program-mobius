@@ -15,7 +15,20 @@ function formatNumber(n) {
   n = n.toString()
   return n[1] ? n : '0' + n
 }
+const API_URL = 'https://import.xiaohujr.com/comimport/order/status' 
+function getData(url, params) {
+  return new Promise((res, rej) => {
+    wx.request({
+      url: 'https://import.xiaohujr.com/comimport/order/status',
+      data: Object.assign({}, params),
+      header: { 'content-type': 'application/json' },
+      success: res,
+      fail: rej
+    })
+  }).then(res => res.data)
+}  
 
 module.exports = {
-  formatTime: formatTime
+  formatTime: formatTime,
+  getData: getData
 }
